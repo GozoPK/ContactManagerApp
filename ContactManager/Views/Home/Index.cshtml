@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+@model List<Contact>
+
+<h1>Contacts</h1>
+
+@foreach (var contact in Model)
+{
+    <div class="card mb-3" style="max-width: 740px;">
+        <div class="row g-0">
+            <div class="col-md-3">
+                <img src="~/lib/images/user.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between">
+                    <div class="card-body pb-0">
+                        <h5 class="card-title">@contact.FirstName @contact.LastName</h5>
+                        <div class="card-text">@contact.City, @contact.Prefecture, @contact.PostalCode</div>
+                        <div class="card-text">@contact.MobileNumber</div>
+                        <div class="card-text">Ημ/νια Γέννησης: @contact.DateOfBirth.ToShortDateString()</div>
+                    </div>
+                    <div class="card-body pb-0">
+                        <h5 class="card-title">E-mails</h5>
+                        <ul class="list-unstyled">
+                            @foreach (var email in contact.Emails)
+                            {
+                                <li>@email.EmailAddress</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                @if (User.Claims.Any(c => c.Value == "Admin"))
+                {
+                    <div class="d-flex pb-1 position-absolute bottom-0">
+                        <a type="button" class="btn btn-outline-primary mx-2" asp-action="Update" asp-route-id="@contact.ContactId">Επεξεργασία</a>
+                        <a type="button" class="btn btn-outline-secondary" asp-action="Delete" asp-route-id="@contact.ContactId">Διαγραφή</a>
+                    </div>
+                }    
+            </div>
+        </div>
+    </div>
+}
+
+

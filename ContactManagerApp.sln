@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagerApi", "ContactManagerApi\ContactManagerApi.csproj", "{3839C556-414A-4833-BB40-4F5050A74E7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager", "ContactManager\ContactManager.csproj", "{DACE3363-EA35-42A8-9987-007843F2BC82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3839C556-414A-4833-BB40-4F5050A74E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3839C556-414A-4833-BB40-4F5050A74E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3839C556-414A-4833-BB40-4F5050A74E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3839C556-414A-4833-BB40-4F5050A74E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DACE3363-EA35-42A8-9987-007843F2BC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACE3363-EA35-42A8-9987-007843F2BC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACE3363-EA35-42A8-9987-007843F2BC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACE3363-EA35-42A8-9987-007843F2BC82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

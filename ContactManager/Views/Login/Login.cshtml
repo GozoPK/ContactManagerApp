@@ -1,0 +1,32 @@
+﻿@model LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div>
+    <h2 class="text-center">Login</h2>
+    @if (TempData["Error"] != null)
+    {
+        <div class="text-danger">@TempData["Error"]</div>        
+    }
+
+    <form asp-action="Login" style="max-width: 300px; margin: 0 auto" method="post">
+        <div class="form-group my-3">
+            <label asp-for="Username"></label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+
+
+
